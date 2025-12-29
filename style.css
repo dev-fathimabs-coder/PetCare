@@ -12,14 +12,19 @@
   --bg-colour-blue: #16969E;
   --font-color-one: #00A2B8;
   --theme-font: "Poppins", sans-serif;
-  background-image: linear-gradient(90deg,
-      var(--bg-colour-one),
-      var(--bg-colour-two));
+
 }
 
 body {
   font-family: var(--theme-font);
 
+}
+
+/* hero section */
+.hero {
+  background-image: linear-gradient(90deg,
+      var(--bg-colour-one),
+      var(--bg-colour-two));
 }
 
 
@@ -54,7 +59,6 @@ a {
 
 /* Section 1 */
 .section-1 {
-  background: url("./images/dog-image.png") center / cover no-repeat;
   min-height: 40vh;
   display: flex;
   align-items: center;
@@ -63,6 +67,13 @@ a {
 .sub-section {
   padding: 35px;
   margin: 20px;
+
+  background-image: url("./images/dog-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  width: 100%;
 }
 
 .main-text {
@@ -75,14 +86,16 @@ a {
 }
 
 .main-text-2 {
-  margin-top: 15px;
+  margin: 30px 0;
   font-size: 25px;
   word-break: break-word;
+
+  max-width: 700px;
 }
 
-.section-btn {
-  padding: 14px;
-}
+
+
+
 
 /* Buttons */
 .btn,
@@ -96,12 +109,20 @@ a {
 
 }
 
+
 /* Section 2 */
 .section-2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin: 20px;
+
+  background-image: linear-gradient(90deg,
+      var(--bg-colour-one),
+      var(--bg-colour-two));
+
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .section-2 div {
@@ -129,9 +150,7 @@ a {
 }
 
 .section-3-img img {
-  max-width: 100%;
-  height: auto;
-
+  width: 200px;
 }
 
 .section-3 h1 {
@@ -149,7 +168,7 @@ a {
   background-color: white;
   display: flex;
   flex-direction: column;
-
+  margin: 0 100px;
 }
 
 .section-4 h1 {
@@ -168,6 +187,7 @@ a {
   background-color: white;
   display: flex;
   flex-direction: column;
+  margin: 0 150px;
 }
 
 .sec-4-img {
@@ -197,7 +217,7 @@ a {
 .section-5 {
   background-color: var(--bg-colour-pink);
   padding: 30px 20px;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -232,19 +252,9 @@ a {
   width: fit-content;
 }
 
-ul {
-  list-style: none;
-}
 
-footer {
-  background-color: white;
-  padding: 20px;
 
-}
 
-.logo-foot {
-  text-align: left;
-}
 
 .section-6 {
 
@@ -279,39 +289,61 @@ footer {
   text-align: center;
 }
 
-.sec-6-person {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .section-7 {
   background-color: #EDFAFC;
-  padding: 20px;
+  padding: 0 0 30px;
 }
-.section-7-1{
-  text-align: center;
-}
-.section-7-2{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.sec-7-card-img img{
 
+.section-7-1 {
+  text-align: center;
+  padding: 50px 0 50px;
 }
-.sec-7-card{
+
+.section-7-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.sec-7-card-img img {
+  position: absolute;
+  top: -50px;
+  left: 100px;
+  width: 100px;
+}
+
+.sec-7-card {
+  position: relative;
   border-style: solid;
   border-width: 1px;
   border-color: var(--bg-button-color);
-  border-radius: 2px;
-  /* width: 50%;
-  height: 10px; */
+  border-radius: 25px;
+  width: 300px;
+  height: 150px;
   text-align: center;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.footer {
+  background-color: white;
+  padding: 100px;
 
+}
+
+.logo-foot {
+  text-align: left;
+}
+
+.footer li {
+
+  color: rgb(42, 41, 41);
+}
 
 
 /* Media Query */
@@ -320,14 +352,17 @@ align-items: center;
 
 
 @media (min-width: 700px) {
-  body {
-    padding: 0 100px;
-  }
+  body {}
 
   .navbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+  }
+
+  .hero {
+    padding: 20px 100px;
   }
 
   .menu-item {
@@ -347,17 +382,24 @@ align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin: 10px;
+    margin: 10px 100px;
+
+    align-items: center;
   }
 
   .section-3-img {
     flex: 1;
   }
 
+  .section-3-img img {
+    max-width: 300px;
+  }
+
   .section-3-about {
     flex: 1;
     text-align: left;
     padding: 20px;
+
   }
 
   .sec-4-content {
@@ -368,19 +410,20 @@ align-items: center;
 
   }
 
-  .section-5 {
+  /* .section-5 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 40px 0;
-  }
+  } */
 
   .section-5 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 60px;
+
   }
 
   .section-5-img img {
@@ -392,29 +435,38 @@ align-items: center;
   }
 
   .section-6-2 {
-   
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
   }
 
   .section-6-2-1 {
     /* width: 50%; */
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    flex: 1;
   }
 
   .section-6-person {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-   
   }
- .section-6-2-2{
-  text-align: center;
-  margin: 50px;
- }
+
+  .section-6-2-2 {
+    flex: 1;
+    margin: 100px;
+  }
+
+  .section-7-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
 
   .footer {
     display: flex;
